@@ -42,7 +42,7 @@ div.stButton > button:hover {
     color:#ffffff;
     }
 </style>""", unsafe_allow_html=True)
-#add_bg_from_url()
+add_bg_from_url()
 df_gong=pd.read_csv('df_gong')
 df_sa=pd.read_csv('df_sa')
 df_gong2=df_gong.sort_values('구조일자')
