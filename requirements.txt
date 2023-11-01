@@ -1,7 +1,5 @@
 streamlit
 pandas
 numpy
-os
-time
 PIL
 datetime
