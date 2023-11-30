@@ -47,7 +47,9 @@ df_gong=pd.read_csv('df_gong')
 df_sa=pd.read_csv('df_sa')
 df_gong2=df_gong.sort_values('구조일자')
 df_sa2=df_sa.sort_values('구조일자')
-st.sidebar.header('잃어버린 동물 정보')
+im=Image.open('anione_logo.png')
+im=im.resize((1400,610))
+st.sidebar.header(':turtle:실종동물 정보 입력:dog:')
 date_list=sorted(list(set(list(df_gong['구조일자'].values)+list(df_sa['구조일자'].values))))
 date_input=st.sidebar.selectbox('실종 일자를 선택하세요',date_list)
 plc1_list=sorted(list(set(list(df_gong['구조장소'].values)+list(df_sa['구조장소'].values))))
@@ -82,7 +84,7 @@ button=st.sidebar.button('검색')
 st.session_state['wait']='조금만 기다려주세요. 데이터를 가져오는 중입니다.'
 
 if button==True:
-    st.subheader('보호소 또는 동물병원')
+    st.subheader('보호소:office: 또는 동물병원:hospital:')
     col1,col2,col3=st.columns(3)
     col_num=1
     date_input1=datetime.strptime(date_input,"%Y-%m-%d")
@@ -137,7 +139,7 @@ if button==True:
     st.write('')
     st.write('')
     st.write('')
-    st.subheader('목격 또는 임시보호')
+    st.subheader('목격:information_desk_person: 또는 임시보호:house_with_garden:')
     abc=False
     first=[]
     second=[]
